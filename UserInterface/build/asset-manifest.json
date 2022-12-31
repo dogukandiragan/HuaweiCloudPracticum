@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b90c2d5.css",
+    "main.js": "/static/js/main.0c97b10b.js",
+    "static/media/byd2024.jpg": "/static/media/byd2024.a961c41ed475df6b3508.jpg",
+    "index.html": "/index.html",
+    "main.2b90c2d5.css.map": "/static/css/main.2b90c2d5.css.map",
+    "main.0c97b10b.js.map": "/static/js/main.0c97b10b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2b90c2d5.css",
+    "static/js/main.0c97b10b.js"
+  ]
+}
