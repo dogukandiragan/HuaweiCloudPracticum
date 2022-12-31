@@ -1,0 +1,38 @@
+version: '3'
+services:
+  web:
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - /app/node_modules
+      - .:/app
+  tests:
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+    command: ['npm', 'run', 'test']
+
+
+
+    
+
+    # env_file: ./server/.env # TODO - uncomment this to auto-load your .env file!
+  web:
+  image: nginx
+  volumes:
+   - ./templates:/etc/nginx/templates
+  ports:
+   - "8080:80"
+  environment:
+   - NGINX_HOST=foobar.com
+   - NGINX_PORT=80
